@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class Tweet: NSObject {
     var text: String?
@@ -35,15 +36,7 @@ class Tweet: NSObject {
         if let timestampString = timestampString {
             let formatter = NSDateFormatter()
             formatter.dateFormat = "EEE/MMM/d HH:mm:ss Z y"
-            //print ("\(formatter.dateFromString(timestampString)!)")
-           // var now = NSDate()
-            //now = formatter.dateFromString(String(now))!
-            //print (now)
-            
-           // if
-           // else{
-             timestamp = formatter.dateFromString(timestampString)!
-           // }
+            timestamp = formatter.dateFromString(timestampString)!
             
         
         }
@@ -58,6 +51,35 @@ class Tweet: NSObject {
         }
         return tweets
     
+    }
+    
+    func timeAgoSince(date: NSDate) -> String {
+        
+        let calendar = NSCalendar.currentCalendar()
+        let now = NSDate()
+        let unitFlags: NSCalendarUnit = [.Second, .Minute, .Hour, .Day, .WeekOfYear, .Month, .Year]
+        let components = calendar.components(unitFlags, fromDate: date, toDate: now, options: [])
+        
+        if components.day >= 1 {
+            return "\(components.day)d"
+        }
+        
+        if components.hour >= 1 {
+            return "\(components.hour)h"
+        }
+        
+        if components.minute >= 1 {
+            return "\(components.minute)m"
+        }
+        
+        if components.second >= 3 {
+            return "\(components.second)s"
+        }
+        if components.second < 3 {
+            return "Just now"
+        }
+        return "\(date)"
+        
     }
 
 }

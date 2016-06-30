@@ -24,7 +24,7 @@ class TweetTableViewCell: UITableViewCell {
         didSet {
             if let message = tweet?.text {
             tweetLabel.text = "\(message)"
-            timestampLabel.text = "\(tweet.timestamp!)"
+            timestampLabel.text = tweet.timeAgoSince(tweet.timestamp!)
             usernameLabel.text = "\(tweet.username!)"
             retweetLabel.text = "\(tweet.retweetCount)"
             favoriteLabel.text = "\(tweet.favoritesCount)"
