@@ -18,8 +18,9 @@ class TweetTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var favoriteLabel: UILabel!
     @IBOutlet weak var retweetLabel: UILabel!
+    @IBOutlet weak var handleLabel: UILabel!
     
-    
+ 
     var tweet: Tweet! {
         didSet {
             if let message = tweet?.text {
@@ -28,6 +29,7 @@ class TweetTableViewCell: UITableViewCell {
             usernameLabel.text = "\(tweet.username!)"
             retweetLabel.text = "\(tweet.retweetCount)"
             favoriteLabel.text = "\(tweet.favoritesCount)"
+            handleLabel.text = "@\(tweet.handle)"
             ImageLoader.sharedLoader.imageForUrl(tweet.picUrl, completionHandler: { (image: UIImage?, url: String) in
                 self.profileImageView.image = image!
             
@@ -39,22 +41,26 @@ class TweetTableViewCell: UITableViewCell {
     }
     @IBAction func toFavorite(sender: AnyObject) {
         print ("you hit the button")
+        print(favoriteLabel)
         TwitterClient.sharedInstance.favorite(tweet.tweetID)
+        print(favoriteLabel)
     }
 
     @IBAction func toRetweet(sender: AnyObject) {
         print ("you should be retweeting")
-        //TwitterClient.sharedInstance.retweet(tweet.userID)
+        TwitterClient.sharedInstance.retweet(tweet.userID)
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-
+    
 }

@@ -6,7 +6,7 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "Twitter_logo_blue_48.png",
+      "filename" : "profile_icon.png",
       "scale" : "2x"
     },
     {
@@ -19,6 +19,6 @@
     "author" : "xcode"
   },
   "properties" : {
-    "template-rendering-intent" : "template"
+    "template-rendering-intent" : "original"
   }
 }

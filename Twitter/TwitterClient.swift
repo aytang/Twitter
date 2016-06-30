@@ -58,10 +58,10 @@ class TwitterClient: BDBOAuth1SessionManager {
         NSNotificationCenter.defaultCenter().postNotificationName(User.userDidLogoutNotification, object: nil)
     }
     
-    func favorite(userID: String) -> ()
+    func favorite(tweetID: String) -> ()
     {
-        let fullstr = "https://api.twitter.com/1.1/favorites/create.json?id=" + userID
-        print (userID)
+        let fullstr = "https://api.twitter.com/1.1/favorites/create.json?id=" + tweetID
+        print (tweetID)
         POST(fullstr, parameters: nil, success: { ( task:NSURLSessionDataTask, response:AnyObject?) -> Void in
                 print ("This has been favorited.")
                 }, failure: { (task: NSURLSessionDataTask?, error: NSError?) -> Void in

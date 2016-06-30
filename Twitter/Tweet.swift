@@ -19,6 +19,11 @@ class Tweet: NSObject {
     var picUrl: String!
     var tweetID: String!
     var userID: String!
+    var handle: String!
+    var followingCount: Int?
+    var tweetsCount: Int?
+    var tagline: String!
+    var followersCount: Int?
     
     init(dictionary: NSDictionary) {
         text = dictionary["text"] as? String
@@ -27,7 +32,11 @@ class Tweet: NSObject {
         favoritesCount = (dictionary["favorite_count"] as? Int) ?? 0
         username = user["name"] as? String
         tweetID = dictionary["id_str"] as! String
-       
+        handle = user["screen_name"] as? String
+        followingCount = (user["friends_count"] as? Int) ?? 0
+        tweetsCount = (user["statuses_count"] as? Int) ?? 0
+        tagline = user["description"] as? String
+        followersCount = (user["followers_count"] as? Int) ?? 0
         //if let hello = (dictionary["retweeted_status"]!["id_str"]){
           //  userID = hello as! String
         //}

@@ -58,20 +58,39 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("toDetailView", sender: self)
+
+    }
     
     func  tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tweetCell = tableView.dequeueReusableCellWithIdentifier("tweetCell") as! TweetTableViewCell
         tweetCell.tweet = self.tweets?[indexPath.row]
         return tweetCell
             }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "toDetailView" {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let tweet = self.tweets![indexPath!.row]
+            let detailViewController = segue.destinationViewController as! DetailViewController
+            detailViewController.tweet = tweet
+
+        }
+            /*
+        else if segue.identifier == "toProfileView" {
+            let profileViewController = segue.destinationViewController as! ProfileViewController
+            profileViewController.tweet = tweet
+        }
+        */
+               print ("prepare for segue called")
     }
-    */
+    
 
 }
