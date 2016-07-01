@@ -10,10 +10,10 @@ import UIKit
 
 class User: NSObject {
 
-    var name: NSString?
-    var screenname: NSString?
+    var name: String?
+    var screenname: String?
     var profileUrl: String?
-    var tagline: NSString?
+    var tagline: String?
     var dictionary: NSDictionary?
     var followingCount: Int?
     var tweetsCount: Int?
@@ -21,7 +21,7 @@ class User: NSObject {
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
-        name = dictionary["name"] as? String
+        name = (dictionary["name"] as? String) ?? ""
         followingCount = (dictionary["friends_count"] as? Int) ?? 0
         tweetsCount = (dictionary["statuses_count"] as? Int) ?? 0
         screenname = dictionary["screen_name"] as? String
