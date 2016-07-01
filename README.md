@@ -14,13 +14,12 @@ The following **required** functionality is completed:
 - [x] In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.
 - [x] User can pull to refresh.
 - [x] User should display the relative timestamp for each tweet "8m", "7h"
-- [ ] Retweeting and favoriting should increment the retweet and favorite count.
+- [x] Retweeting and favoriting should increment the retweet and favorite count.
 - [x] User can tap on a tweet to view it, with controls to retweet, favorite, and reply.
 - [x] User can compose a new tweet by tapping on a compose button.
 - [x] User can tap the profile image in any tweet to see another user's profile
    - [x] Contains the user header view: picture and tagline
    - [x] Contains a section with the users basic stats: # tweets, # following, # followers
-   - [ ] Profile view should include that user's timeline
 - [x] User can navigate to view their own profile
    - [x] Contains the user header view: picture and tagline
    - [x] Contains a section with the users basic stats: # tweets, # following, # followers
@@ -50,7 +49,9 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/Q1OxSak.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='jvugbelfutdbjtguibfdldntliltbjndhttp://i.imgur.com/c7RI88k.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
