@@ -1,4 +1,3 @@
-# Twitter
 # Project 4 - Twitter
 
 Twitter is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
@@ -39,7 +38,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Used Twitter icons for retweeet, favorite, reply, and user 
+- [x] Used Twitter icons for retweet, favorite, reply, and user 
 - [x] Displays user handle next to username
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
@@ -59,8 +58,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
-Spent a long time trying to adjust the Twitter icons -> were downloaded wrong
-Did AutoLayout early -> should really wait to the very end
+1. Spent a long time trying to adjust the Twitter icons -> were downloaded wrong
+2. Did AutoLayout early -> should really wait to the very end
 
 ## Credits
 
