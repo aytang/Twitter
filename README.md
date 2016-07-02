@@ -14,7 +14,7 @@ The following **required** functionality is completed:
 - [x] In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.
 - [x] User can pull to refresh.
 - [x] User should display the relative timestamp for each tweet "8m", "7h"
-- [x] Retweeting and favoriting should increment the retweet and favorite count.
+- [ ] Retweeting and favoriting should increment the retweet and favorite count.
 - [x] User can tap on a tweet to view it, with controls to retweet, favorite, and reply.
 - [x] User can compose a new tweet by tapping on a compose button.
 - [x] User can tap the profile image in any tweet to see another user's profile
@@ -44,6 +44,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 1. using the API (GET, POST)
 2. further refactorizing suggestions
+3. attempted to load user timeline and implement retweet, favorite, and tweet
 
 ## Video Walkthrough
 
